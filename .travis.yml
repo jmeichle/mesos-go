@@ -3,6 +3,8 @@ language: go
 # handle submodules ourselves
 git:
   submodules: false
+env:
+  - PROTOBUF_VERSION=2.6.1
 go:
   - 1.7.x
   - 1.8
@@ -13,6 +15,7 @@ before_install:
   - go get github.com/mattn/goveralls
   - go get github.com/kardianos/govendor
   - make sync
+  - api/v1/vendor/github.com/gogo/protobuf/install-protobuf.sh
   # re-generate protobuf and json code, check that there are no differences w/ respect to what's been checked in
   - (cd api/v1; govendor install +vendor,program) && make protobufs ffjson && [[ `{ git status --porcelain || echo "failed"; } | wc -l` = "0" ]]
 install:
