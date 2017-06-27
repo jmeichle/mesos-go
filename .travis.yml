@@ -13,6 +13,8 @@ before_install:
   - go get github.com/mattn/goveralls
   - go get github.com/kardianos/govendor
   - make sync
+  # re-generate protobuf and json code, check that there are no differences w/ respect to what's been checked in
+  - (cd api/v1; govendor install +vendor,program) && make protobufs ffjson && [[ `{ git status --porcelain || echo "failed"; } | wc -l` = "0" ]]
 install:
   - make test install
 script:

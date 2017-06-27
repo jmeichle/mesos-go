@@ -320,6 +320,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -508,6 +509,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -1045,6 +1047,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -1242,6 +1245,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -1736,6 +1740,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -1997,6 +2002,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -2201,6 +2207,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -2403,6 +2410,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -2908,6 +2916,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -3099,6 +3108,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -3348,6 +3358,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -3684,6 +3695,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -3886,6 +3898,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -4088,6 +4101,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -4699,6 +4713,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -5160,6 +5175,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -5413,6 +5429,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -6217,6 +6234,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -6896,6 +6914,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -7201,6 +7220,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -7405,6 +7425,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -7842,6 +7863,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -8090,6 +8112,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -8340,6 +8363,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -8891,6 +8915,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -8915,9 +8940,9 @@ func (mj *DurationInfo) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	var obj []byte
 	_ = obj
 	_ = err
-	buf.WriteString(`{"nanoseconds":`)
+	buf.WriteString(`{"nanoseconds":"`)
 	fflib.FormatBits2(buf, uint64(mj.Nanoseconds), 10, mj.Nanoseconds < 0)
-	buf.WriteByte('}')
+	buf.WriteString(`"}`)
 	return nil
 }
 
@@ -9041,10 +9066,10 @@ mainparse:
 
 handle_Nanoseconds:
 
-	/* handler: uj.Nanoseconds type=int64 kind=int64 quoted=false*/
+	/* handler: uj.Nanoseconds type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -9083,6 +9108,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -9333,6 +9359,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -9581,6 +9608,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -9769,6 +9797,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -10673,6 +10702,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -10707,10 +10737,11 @@ func (mj *FileInfo) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 			buf.WriteByte(',')
 		}
 	}
-	if mj.Size_ != nil {
+	if mj.Size != nil {
 		if true {
-			buf.WriteString(`"size":`)
-			fflib.FormatBits2(buf, uint64(*mj.Size_), 10, false)
+			buf.WriteString(`"size":"`)
+			fflib.FormatBits2(buf, uint64(*mj.Size), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -10763,7 +10794,7 @@ const (
 
 	ffj_t_FileInfo_Nlink
 
-	ffj_t_FileInfo_Size_
+	ffj_t_FileInfo_Size
 
 	ffj_t_FileInfo_Mtime
 
@@ -10778,7 +10809,7 @@ var ffj_key_FileInfo_Path = []byte("path")
 
 var ffj_key_FileInfo_Nlink = []byte("nlink")
 
-var ffj_key_FileInfo_Size_ = []byte("size")
+var ffj_key_FileInfo_Size = []byte("size")
 
 var ffj_key_FileInfo_Mtime = []byte("mtime")
 
@@ -10886,8 +10917,8 @@ mainparse:
 
 				case 's':
 
-					if bytes.Equal(ffj_key_FileInfo_Size_, kn) {
-						currentKey = ffj_t_FileInfo_Size_
+					if bytes.Equal(ffj_key_FileInfo_Size, kn) {
+						currentKey = ffj_t_FileInfo_Size
 						state = fflib.FFParse_want_colon
 						goto mainparse
 					}
@@ -10926,8 +10957,8 @@ mainparse:
 					goto mainparse
 				}
 
-				if fflib.EqualFoldRight(ffj_key_FileInfo_Size_, kn) {
-					currentKey = ffj_t_FileInfo_Size_
+				if fflib.EqualFoldRight(ffj_key_FileInfo_Size, kn) {
+					currentKey = ffj_t_FileInfo_Size
 					state = fflib.FFParse_want_colon
 					goto mainparse
 				}
@@ -10967,8 +10998,8 @@ mainparse:
 				case ffj_t_FileInfo_Nlink:
 					goto handle_Nlink
 
-				case ffj_t_FileInfo_Size_:
-					goto handle_Size_
+				case ffj_t_FileInfo_Size:
+					goto handle_Size
 
 				case ffj_t_FileInfo_Mtime:
 					goto handle_Mtime
@@ -11055,12 +11086,12 @@ handle_Nlink:
 	state = fflib.FFParse_after_value
 	goto mainparse
 
-handle_Size_:
+handle_Size:
 
-	/* handler: uj.Size_ type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Size type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -11069,7 +11100,7 @@ handle_Size_:
 
 		if tok == fflib.FFTok_null {
 
-			uj.Size_ = nil
+			uj.Size = nil
 
 		} else {
 
@@ -11080,7 +11111,7 @@ handle_Size_:
 			}
 
 			ttypval := uint64(tval)
-			uj.Size_ = &ttypval
+			uj.Size = &ttypval
 
 		}
 	}
@@ -11222,6 +11253,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -11424,6 +11456,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -11672,6 +11705,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -11860,6 +11894,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -12807,6 +12842,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -13004,6 +13040,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -13689,6 +13726,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -14109,6 +14147,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -14301,6 +14340,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -14328,190 +14368,217 @@ func (mj *IcmpStatistics) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	buf.WriteString(`{ `)
 	if mj.InMsgs != nil {
 		if true {
-			buf.WriteString(`"InMsgs":`)
+			buf.WriteString(`"InMsgs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InMsgs), 10, *mj.InMsgs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InErrors != nil {
 		if true {
-			buf.WriteString(`"InErrors":`)
+			buf.WriteString(`"InErrors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InErrors), 10, *mj.InErrors < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InCsumErrors != nil {
 		if true {
-			buf.WriteString(`"InCsumErrors":`)
+			buf.WriteString(`"InCsumErrors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InCsumErrors), 10, *mj.InCsumErrors < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InDestUnreachs != nil {
 		if true {
-			buf.WriteString(`"InDestUnreachs":`)
+			buf.WriteString(`"InDestUnreachs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InDestUnreachs), 10, *mj.InDestUnreachs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InTimeExcds != nil {
 		if true {
-			buf.WriteString(`"InTimeExcds":`)
+			buf.WriteString(`"InTimeExcds":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InTimeExcds), 10, *mj.InTimeExcds < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InParmProbs != nil {
 		if true {
-			buf.WriteString(`"InParmProbs":`)
+			buf.WriteString(`"InParmProbs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InParmProbs), 10, *mj.InParmProbs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InSrcQuenchs != nil {
 		if true {
-			buf.WriteString(`"InSrcQuenchs":`)
+			buf.WriteString(`"InSrcQuenchs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InSrcQuenchs), 10, *mj.InSrcQuenchs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InRedirects != nil {
 		if true {
-			buf.WriteString(`"InRedirects":`)
+			buf.WriteString(`"InRedirects":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InRedirects), 10, *mj.InRedirects < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InEchos != nil {
 		if true {
-			buf.WriteString(`"InEchos":`)
+			buf.WriteString(`"InEchos":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InEchos), 10, *mj.InEchos < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InEchoReps != nil {
 		if true {
-			buf.WriteString(`"InEchoReps":`)
+			buf.WriteString(`"InEchoReps":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InEchoReps), 10, *mj.InEchoReps < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InTimestamps != nil {
 		if true {
-			buf.WriteString(`"InTimestamps":`)
+			buf.WriteString(`"InTimestamps":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InTimestamps), 10, *mj.InTimestamps < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InTimestampReps != nil {
 		if true {
-			buf.WriteString(`"InTimestampReps":`)
+			buf.WriteString(`"InTimestampReps":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InTimestampReps), 10, *mj.InTimestampReps < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InAddrMasks != nil {
 		if true {
-			buf.WriteString(`"InAddrMasks":`)
+			buf.WriteString(`"InAddrMasks":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InAddrMasks), 10, *mj.InAddrMasks < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InAddrMaskReps != nil {
 		if true {
-			buf.WriteString(`"InAddrMaskReps":`)
+			buf.WriteString(`"InAddrMaskReps":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InAddrMaskReps), 10, *mj.InAddrMaskReps < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutMsgs != nil {
 		if true {
-			buf.WriteString(`"OutMsgs":`)
+			buf.WriteString(`"OutMsgs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutMsgs), 10, *mj.OutMsgs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutErrors != nil {
 		if true {
-			buf.WriteString(`"OutErrors":`)
+			buf.WriteString(`"OutErrors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutErrors), 10, *mj.OutErrors < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutDestUnreachs != nil {
 		if true {
-			buf.WriteString(`"OutDestUnreachs":`)
+			buf.WriteString(`"OutDestUnreachs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutDestUnreachs), 10, *mj.OutDestUnreachs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutTimeExcds != nil {
 		if true {
-			buf.WriteString(`"OutTimeExcds":`)
+			buf.WriteString(`"OutTimeExcds":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutTimeExcds), 10, *mj.OutTimeExcds < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutParmProbs != nil {
 		if true {
-			buf.WriteString(`"OutParmProbs":`)
+			buf.WriteString(`"OutParmProbs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutParmProbs), 10, *mj.OutParmProbs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutSrcQuenchs != nil {
 		if true {
-			buf.WriteString(`"OutSrcQuenchs":`)
+			buf.WriteString(`"OutSrcQuenchs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutSrcQuenchs), 10, *mj.OutSrcQuenchs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutRedirects != nil {
 		if true {
-			buf.WriteString(`"OutRedirects":`)
+			buf.WriteString(`"OutRedirects":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutRedirects), 10, *mj.OutRedirects < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutEchos != nil {
 		if true {
-			buf.WriteString(`"OutEchos":`)
+			buf.WriteString(`"OutEchos":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutEchos), 10, *mj.OutEchos < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutEchoReps != nil {
 		if true {
-			buf.WriteString(`"OutEchoReps":`)
+			buf.WriteString(`"OutEchoReps":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutEchoReps), 10, *mj.OutEchoReps < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutTimestamps != nil {
 		if true {
-			buf.WriteString(`"OutTimestamps":`)
+			buf.WriteString(`"OutTimestamps":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutTimestamps), 10, *mj.OutTimestamps < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutTimestampReps != nil {
 		if true {
-			buf.WriteString(`"OutTimestampReps":`)
+			buf.WriteString(`"OutTimestampReps":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutTimestampReps), 10, *mj.OutTimestampReps < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutAddrMasks != nil {
 		if true {
-			buf.WriteString(`"OutAddrMasks":`)
+			buf.WriteString(`"OutAddrMasks":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutAddrMasks), 10, *mj.OutAddrMasks < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutAddrMaskReps != nil {
 		if true {
-			buf.WriteString(`"OutAddrMaskReps":`)
+			buf.WriteString(`"OutAddrMaskReps":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutAddrMaskReps), 10, *mj.OutAddrMaskReps < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -15111,10 +15178,10 @@ mainparse:
 
 handle_InMsgs:
 
-	/* handler: uj.InMsgs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InMsgs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15144,10 +15211,10 @@ handle_InMsgs:
 
 handle_InErrors:
 
-	/* handler: uj.InErrors type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InErrors type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15177,10 +15244,10 @@ handle_InErrors:
 
 handle_InCsumErrors:
 
-	/* handler: uj.InCsumErrors type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InCsumErrors type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15210,10 +15277,10 @@ handle_InCsumErrors:
 
 handle_InDestUnreachs:
 
-	/* handler: uj.InDestUnreachs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InDestUnreachs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15243,10 +15310,10 @@ handle_InDestUnreachs:
 
 handle_InTimeExcds:
 
-	/* handler: uj.InTimeExcds type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InTimeExcds type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15276,10 +15343,10 @@ handle_InTimeExcds:
 
 handle_InParmProbs:
 
-	/* handler: uj.InParmProbs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InParmProbs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15309,10 +15376,10 @@ handle_InParmProbs:
 
 handle_InSrcQuenchs:
 
-	/* handler: uj.InSrcQuenchs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InSrcQuenchs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15342,10 +15409,10 @@ handle_InSrcQuenchs:
 
 handle_InRedirects:
 
-	/* handler: uj.InRedirects type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InRedirects type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15375,10 +15442,10 @@ handle_InRedirects:
 
 handle_InEchos:
 
-	/* handler: uj.InEchos type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InEchos type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15408,10 +15475,10 @@ handle_InEchos:
 
 handle_InEchoReps:
 
-	/* handler: uj.InEchoReps type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InEchoReps type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15441,10 +15508,10 @@ handle_InEchoReps:
 
 handle_InTimestamps:
 
-	/* handler: uj.InTimestamps type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InTimestamps type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15474,10 +15541,10 @@ handle_InTimestamps:
 
 handle_InTimestampReps:
 
-	/* handler: uj.InTimestampReps type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InTimestampReps type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15507,10 +15574,10 @@ handle_InTimestampReps:
 
 handle_InAddrMasks:
 
-	/* handler: uj.InAddrMasks type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InAddrMasks type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15540,10 +15607,10 @@ handle_InAddrMasks:
 
 handle_InAddrMaskReps:
 
-	/* handler: uj.InAddrMaskReps type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InAddrMaskReps type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15573,10 +15640,10 @@ handle_InAddrMaskReps:
 
 handle_OutMsgs:
 
-	/* handler: uj.OutMsgs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutMsgs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15606,10 +15673,10 @@ handle_OutMsgs:
 
 handle_OutErrors:
 
-	/* handler: uj.OutErrors type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutErrors type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15639,10 +15706,10 @@ handle_OutErrors:
 
 handle_OutDestUnreachs:
 
-	/* handler: uj.OutDestUnreachs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutDestUnreachs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15672,10 +15739,10 @@ handle_OutDestUnreachs:
 
 handle_OutTimeExcds:
 
-	/* handler: uj.OutTimeExcds type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutTimeExcds type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15705,10 +15772,10 @@ handle_OutTimeExcds:
 
 handle_OutParmProbs:
 
-	/* handler: uj.OutParmProbs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutParmProbs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15738,10 +15805,10 @@ handle_OutParmProbs:
 
 handle_OutSrcQuenchs:
 
-	/* handler: uj.OutSrcQuenchs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutSrcQuenchs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15771,10 +15838,10 @@ handle_OutSrcQuenchs:
 
 handle_OutRedirects:
 
-	/* handler: uj.OutRedirects type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutRedirects type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15804,10 +15871,10 @@ handle_OutRedirects:
 
 handle_OutEchos:
 
-	/* handler: uj.OutEchos type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutEchos type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15837,10 +15904,10 @@ handle_OutEchos:
 
 handle_OutEchoReps:
 
-	/* handler: uj.OutEchoReps type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutEchoReps type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15870,10 +15937,10 @@ handle_OutEchoReps:
 
 handle_OutTimestamps:
 
-	/* handler: uj.OutTimestamps type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutTimestamps type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15903,10 +15970,10 @@ handle_OutTimestamps:
 
 handle_OutTimestampReps:
 
-	/* handler: uj.OutTimestampReps type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutTimestampReps type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15936,10 +16003,10 @@ handle_OutTimestampReps:
 
 handle_OutAddrMasks:
 
-	/* handler: uj.OutAddrMasks type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutAddrMasks type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -15969,10 +16036,10 @@ handle_OutAddrMasks:
 
 handle_OutAddrMaskReps:
 
-	/* handler: uj.OutAddrMaskReps type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutAddrMaskReps type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -16014,6 +16081,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -16422,6 +16490,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -16733,6 +16802,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -16986,6 +17056,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -17517,6 +17588,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -17544,134 +17616,153 @@ func (mj *IpStatistics) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	buf.WriteString(`{ `)
 	if mj.Forwarding != nil {
 		if true {
-			buf.WriteString(`"Forwarding":`)
+			buf.WriteString(`"Forwarding":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Forwarding), 10, *mj.Forwarding < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.DefaultTTL != nil {
 		if true {
-			buf.WriteString(`"DefaultTTL":`)
+			buf.WriteString(`"DefaultTTL":"`)
 			fflib.FormatBits2(buf, uint64(*mj.DefaultTTL), 10, *mj.DefaultTTL < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InReceives != nil {
 		if true {
-			buf.WriteString(`"InReceives":`)
+			buf.WriteString(`"InReceives":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InReceives), 10, *mj.InReceives < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InHdrErrors != nil {
 		if true {
-			buf.WriteString(`"InHdrErrors":`)
+			buf.WriteString(`"InHdrErrors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InHdrErrors), 10, *mj.InHdrErrors < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InAddrErrors != nil {
 		if true {
-			buf.WriteString(`"InAddrErrors":`)
+			buf.WriteString(`"InAddrErrors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InAddrErrors), 10, *mj.InAddrErrors < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.ForwDatagrams != nil {
 		if true {
-			buf.WriteString(`"ForwDatagrams":`)
+			buf.WriteString(`"ForwDatagrams":"`)
 			fflib.FormatBits2(buf, uint64(*mj.ForwDatagrams), 10, *mj.ForwDatagrams < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InUnknownProtos != nil {
 		if true {
-			buf.WriteString(`"InUnknownProtos":`)
+			buf.WriteString(`"InUnknownProtos":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InUnknownProtos), 10, *mj.InUnknownProtos < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InDiscards != nil {
 		if true {
-			buf.WriteString(`"InDiscards":`)
+			buf.WriteString(`"InDiscards":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InDiscards), 10, *mj.InDiscards < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InDelivers != nil {
 		if true {
-			buf.WriteString(`"InDelivers":`)
+			buf.WriteString(`"InDelivers":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InDelivers), 10, *mj.InDelivers < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutRequests != nil {
 		if true {
-			buf.WriteString(`"OutRequests":`)
+			buf.WriteString(`"OutRequests":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutRequests), 10, *mj.OutRequests < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutDiscards != nil {
 		if true {
-			buf.WriteString(`"OutDiscards":`)
+			buf.WriteString(`"OutDiscards":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutDiscards), 10, *mj.OutDiscards < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutNoRoutes != nil {
 		if true {
-			buf.WriteString(`"OutNoRoutes":`)
+			buf.WriteString(`"OutNoRoutes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutNoRoutes), 10, *mj.OutNoRoutes < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.ReasmTimeout != nil {
 		if true {
-			buf.WriteString(`"ReasmTimeout":`)
+			buf.WriteString(`"ReasmTimeout":"`)
 			fflib.FormatBits2(buf, uint64(*mj.ReasmTimeout), 10, *mj.ReasmTimeout < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.ReasmReqds != nil {
 		if true {
-			buf.WriteString(`"ReasmReqds":`)
+			buf.WriteString(`"ReasmReqds":"`)
 			fflib.FormatBits2(buf, uint64(*mj.ReasmReqds), 10, *mj.ReasmReqds < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.ReasmOKs != nil {
 		if true {
-			buf.WriteString(`"ReasmOKs":`)
+			buf.WriteString(`"ReasmOKs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.ReasmOKs), 10, *mj.ReasmOKs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.ReasmFails != nil {
 		if true {
-			buf.WriteString(`"ReasmFails":`)
+			buf.WriteString(`"ReasmFails":"`)
 			fflib.FormatBits2(buf, uint64(*mj.ReasmFails), 10, *mj.ReasmFails < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.FragOKs != nil {
 		if true {
-			buf.WriteString(`"FragOKs":`)
+			buf.WriteString(`"FragOKs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.FragOKs), 10, *mj.FragOKs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.FragFails != nil {
 		if true {
-			buf.WriteString(`"FragFails":`)
+			buf.WriteString(`"FragFails":"`)
 			fflib.FormatBits2(buf, uint64(*mj.FragFails), 10, *mj.FragFails < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.FragCreates != nil {
 		if true {
-			buf.WriteString(`"FragCreates":`)
+			buf.WriteString(`"FragCreates":"`)
 			fflib.FormatBits2(buf, uint64(*mj.FragCreates), 10, *mj.FragCreates < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -18136,10 +18227,10 @@ mainparse:
 
 handle_Forwarding:
 
-	/* handler: uj.Forwarding type=int64 kind=int64 quoted=false*/
+	/* handler: uj.Forwarding type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18169,10 +18260,10 @@ handle_Forwarding:
 
 handle_DefaultTTL:
 
-	/* handler: uj.DefaultTTL type=int64 kind=int64 quoted=false*/
+	/* handler: uj.DefaultTTL type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18202,10 +18293,10 @@ handle_DefaultTTL:
 
 handle_InReceives:
 
-	/* handler: uj.InReceives type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InReceives type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18235,10 +18326,10 @@ handle_InReceives:
 
 handle_InHdrErrors:
 
-	/* handler: uj.InHdrErrors type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InHdrErrors type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18268,10 +18359,10 @@ handle_InHdrErrors:
 
 handle_InAddrErrors:
 
-	/* handler: uj.InAddrErrors type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InAddrErrors type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18301,10 +18392,10 @@ handle_InAddrErrors:
 
 handle_ForwDatagrams:
 
-	/* handler: uj.ForwDatagrams type=int64 kind=int64 quoted=false*/
+	/* handler: uj.ForwDatagrams type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18334,10 +18425,10 @@ handle_ForwDatagrams:
 
 handle_InUnknownProtos:
 
-	/* handler: uj.InUnknownProtos type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InUnknownProtos type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18367,10 +18458,10 @@ handle_InUnknownProtos:
 
 handle_InDiscards:
 
-	/* handler: uj.InDiscards type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InDiscards type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18400,10 +18491,10 @@ handle_InDiscards:
 
 handle_InDelivers:
 
-	/* handler: uj.InDelivers type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InDelivers type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18433,10 +18524,10 @@ handle_InDelivers:
 
 handle_OutRequests:
 
-	/* handler: uj.OutRequests type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutRequests type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18466,10 +18557,10 @@ handle_OutRequests:
 
 handle_OutDiscards:
 
-	/* handler: uj.OutDiscards type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutDiscards type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18499,10 +18590,10 @@ handle_OutDiscards:
 
 handle_OutNoRoutes:
 
-	/* handler: uj.OutNoRoutes type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutNoRoutes type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18532,10 +18623,10 @@ handle_OutNoRoutes:
 
 handle_ReasmTimeout:
 
-	/* handler: uj.ReasmTimeout type=int64 kind=int64 quoted=false*/
+	/* handler: uj.ReasmTimeout type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18565,10 +18656,10 @@ handle_ReasmTimeout:
 
 handle_ReasmReqds:
 
-	/* handler: uj.ReasmReqds type=int64 kind=int64 quoted=false*/
+	/* handler: uj.ReasmReqds type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18598,10 +18689,10 @@ handle_ReasmReqds:
 
 handle_ReasmOKs:
 
-	/* handler: uj.ReasmOKs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.ReasmOKs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18631,10 +18722,10 @@ handle_ReasmOKs:
 
 handle_ReasmFails:
 
-	/* handler: uj.ReasmFails type=int64 kind=int64 quoted=false*/
+	/* handler: uj.ReasmFails type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18664,10 +18755,10 @@ handle_ReasmFails:
 
 handle_FragOKs:
 
-	/* handler: uj.FragOKs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.FragOKs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18697,10 +18788,10 @@ handle_FragOKs:
 
 handle_FragFails:
 
-	/* handler: uj.FragFails type=int64 kind=int64 quoted=false*/
+	/* handler: uj.FragFails type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18730,10 +18821,10 @@ handle_FragFails:
 
 handle_FragCreates:
 
-	/* handler: uj.FragCreates type=int64 kind=int64 quoted=false*/
+	/* handler: uj.FragCreates type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -18775,6 +18866,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -18979,6 +19071,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -19227,6 +19320,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -19477,6 +19571,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -19681,6 +19776,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -19938,6 +20034,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -20263,6 +20360,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -20798,6 +20896,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -21049,6 +21148,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -21643,6 +21743,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -21911,6 +22012,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -22216,6 +22318,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -23076,6 +23179,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -23264,6 +23368,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -23838,6 +23943,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -24088,6 +24194,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -24338,6 +24445,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -24588,6 +24696,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -24831,6 +24940,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -25081,6 +25191,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -25331,6 +25442,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -25568,6 +25680,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -25818,6 +25931,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -25849,71 +25963,81 @@ func (mj *PerfStatistics) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	buf.WriteByte(',')
 	if mj.Cycles != nil {
 		if true {
-			buf.WriteString(`"cycles":`)
+			buf.WriteString(`"cycles":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Cycles), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.StalledCyclesFrontend != nil {
 		if true {
-			buf.WriteString(`"stalled_cycles_frontend":`)
+			buf.WriteString(`"stalled_cycles_frontend":"`)
 			fflib.FormatBits2(buf, uint64(*mj.StalledCyclesFrontend), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.StalledCyclesBackend != nil {
 		if true {
-			buf.WriteString(`"stalled_cycles_backend":`)
+			buf.WriteString(`"stalled_cycles_backend":"`)
 			fflib.FormatBits2(buf, uint64(*mj.StalledCyclesBackend), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.Instructions != nil {
 		if true {
-			buf.WriteString(`"instructions":`)
+			buf.WriteString(`"instructions":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Instructions), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.CacheReferences != nil {
 		if true {
-			buf.WriteString(`"cache_references":`)
+			buf.WriteString(`"cache_references":"`)
 			fflib.FormatBits2(buf, uint64(*mj.CacheReferences), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.CacheMisses != nil {
 		if true {
-			buf.WriteString(`"cache_misses":`)
+			buf.WriteString(`"cache_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.CacheMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.Branches != nil {
 		if true {
-			buf.WriteString(`"branches":`)
+			buf.WriteString(`"branches":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Branches), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.BranchMisses != nil {
 		if true {
-			buf.WriteString(`"branch_misses":`)
+			buf.WriteString(`"branch_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.BranchMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.BusCycles != nil {
 		if true {
-			buf.WriteString(`"bus_cycles":`)
+			buf.WriteString(`"bus_cycles":"`)
 			fflib.FormatBits2(buf, uint64(*mj.BusCycles), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.RefCycles != nil {
 		if true {
-			buf.WriteString(`"ref_cycles":`)
+			buf.WriteString(`"ref_cycles":"`)
 			fflib.FormatBits2(buf, uint64(*mj.RefCycles), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -25933,274 +26057,313 @@ func (mj *PerfStatistics) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	}
 	if mj.PageFaults != nil {
 		if true {
-			buf.WriteString(`"page_faults":`)
+			buf.WriteString(`"page_faults":"`)
 			fflib.FormatBits2(buf, uint64(*mj.PageFaults), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MinorFaults != nil {
 		if true {
-			buf.WriteString(`"minor_faults":`)
+			buf.WriteString(`"minor_faults":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MinorFaults), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MajorFaults != nil {
 		if true {
-			buf.WriteString(`"major_faults":`)
+			buf.WriteString(`"major_faults":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MajorFaults), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.ContextSwitches != nil {
 		if true {
-			buf.WriteString(`"context_switches":`)
+			buf.WriteString(`"context_switches":"`)
 			fflib.FormatBits2(buf, uint64(*mj.ContextSwitches), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.CPUMigrations != nil {
 		if true {
-			buf.WriteString(`"cpu_migrations":`)
+			buf.WriteString(`"cpu_migrations":"`)
 			fflib.FormatBits2(buf, uint64(*mj.CPUMigrations), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.AlignmentFaults != nil {
 		if true {
-			buf.WriteString(`"alignment_faults":`)
+			buf.WriteString(`"alignment_faults":"`)
 			fflib.FormatBits2(buf, uint64(*mj.AlignmentFaults), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.EmulationFaults != nil {
 		if true {
-			buf.WriteString(`"emulation_faults":`)
+			buf.WriteString(`"emulation_faults":"`)
 			fflib.FormatBits2(buf, uint64(*mj.EmulationFaults), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.L1DcacheLoads != nil {
 		if true {
-			buf.WriteString(`"l1_dcache_loads":`)
+			buf.WriteString(`"l1_dcache_loads":"`)
 			fflib.FormatBits2(buf, uint64(*mj.L1DcacheLoads), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.L1DcacheLoadMisses != nil {
 		if true {
-			buf.WriteString(`"l1_dcache_load_misses":`)
+			buf.WriteString(`"l1_dcache_load_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.L1DcacheLoadMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.L1DcacheStores != nil {
 		if true {
-			buf.WriteString(`"l1_dcache_stores":`)
+			buf.WriteString(`"l1_dcache_stores":"`)
 			fflib.FormatBits2(buf, uint64(*mj.L1DcacheStores), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.L1DcacheStoreMisses != nil {
 		if true {
-			buf.WriteString(`"l1_dcache_store_misses":`)
+			buf.WriteString(`"l1_dcache_store_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.L1DcacheStoreMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.L1DcachePrefetches != nil {
 		if true {
-			buf.WriteString(`"l1_dcache_prefetches":`)
+			buf.WriteString(`"l1_dcache_prefetches":"`)
 			fflib.FormatBits2(buf, uint64(*mj.L1DcachePrefetches), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.L1DcachePrefetchMisses != nil {
 		if true {
-			buf.WriteString(`"l1_dcache_prefetch_misses":`)
+			buf.WriteString(`"l1_dcache_prefetch_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.L1DcachePrefetchMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.L1IcacheLoads != nil {
 		if true {
-			buf.WriteString(`"l1_icache_loads":`)
+			buf.WriteString(`"l1_icache_loads":"`)
 			fflib.FormatBits2(buf, uint64(*mj.L1IcacheLoads), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.L1IcacheLoadMisses != nil {
 		if true {
-			buf.WriteString(`"l1_icache_load_misses":`)
+			buf.WriteString(`"l1_icache_load_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.L1IcacheLoadMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.L1IcachePrefetches != nil {
 		if true {
-			buf.WriteString(`"l1_icache_prefetches":`)
+			buf.WriteString(`"l1_icache_prefetches":"`)
 			fflib.FormatBits2(buf, uint64(*mj.L1IcachePrefetches), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.L1IcachePrefetchMisses != nil {
 		if true {
-			buf.WriteString(`"l1_icache_prefetch_misses":`)
+			buf.WriteString(`"l1_icache_prefetch_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.L1IcachePrefetchMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.LLCLoads != nil {
 		if true {
-			buf.WriteString(`"llc_loads":`)
+			buf.WriteString(`"llc_loads":"`)
 			fflib.FormatBits2(buf, uint64(*mj.LLCLoads), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.LLCLoadMisses != nil {
 		if true {
-			buf.WriteString(`"llc_load_misses":`)
+			buf.WriteString(`"llc_load_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.LLCLoadMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.LLCStores != nil {
 		if true {
-			buf.WriteString(`"llc_stores":`)
+			buf.WriteString(`"llc_stores":"`)
 			fflib.FormatBits2(buf, uint64(*mj.LLCStores), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.LLCStoreMisses != nil {
 		if true {
-			buf.WriteString(`"llc_store_misses":`)
+			buf.WriteString(`"llc_store_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.LLCStoreMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.LLCPrefetches != nil {
 		if true {
-			buf.WriteString(`"llc_prefetches":`)
+			buf.WriteString(`"llc_prefetches":"`)
 			fflib.FormatBits2(buf, uint64(*mj.LLCPrefetches), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.LLCPrefetchMisses != nil {
 		if true {
-			buf.WriteString(`"llc_prefetch_misses":`)
+			buf.WriteString(`"llc_prefetch_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.LLCPrefetchMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.DTLBLoads != nil {
 		if true {
-			buf.WriteString(`"dtlb_loads":`)
+			buf.WriteString(`"dtlb_loads":"`)
 			fflib.FormatBits2(buf, uint64(*mj.DTLBLoads), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.DTLBLoadMisses != nil {
 		if true {
-			buf.WriteString(`"dtlb_load_misses":`)
+			buf.WriteString(`"dtlb_load_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.DTLBLoadMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.DTLBStores != nil {
 		if true {
-			buf.WriteString(`"dtlb_stores":`)
+			buf.WriteString(`"dtlb_stores":"`)
 			fflib.FormatBits2(buf, uint64(*mj.DTLBStores), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.DTLBStoreMisses != nil {
 		if true {
-			buf.WriteString(`"dtlb_store_misses":`)
+			buf.WriteString(`"dtlb_store_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.DTLBStoreMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.DTLBPrefetches != nil {
 		if true {
-			buf.WriteString(`"dtlb_prefetches":`)
+			buf.WriteString(`"dtlb_prefetches":"`)
 			fflib.FormatBits2(buf, uint64(*mj.DTLBPrefetches), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.DTLBPrefetchMisses != nil {
 		if true {
-			buf.WriteString(`"dtlb_prefetch_misses":`)
+			buf.WriteString(`"dtlb_prefetch_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.DTLBPrefetchMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.ITLBLoads != nil {
 		if true {
-			buf.WriteString(`"itlb_loads":`)
+			buf.WriteString(`"itlb_loads":"`)
 			fflib.FormatBits2(buf, uint64(*mj.ITLBLoads), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.ITLBLoadMisses != nil {
 		if true {
-			buf.WriteString(`"itlb_load_misses":`)
+			buf.WriteString(`"itlb_load_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.ITLBLoadMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.BranchLoads != nil {
 		if true {
-			buf.WriteString(`"branch_loads":`)
+			buf.WriteString(`"branch_loads":"`)
 			fflib.FormatBits2(buf, uint64(*mj.BranchLoads), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.BranchLoadMisses != nil {
 		if true {
-			buf.WriteString(`"branch_load_misses":`)
+			buf.WriteString(`"branch_load_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.BranchLoadMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NodeLoads != nil {
 		if true {
-			buf.WriteString(`"node_loads":`)
+			buf.WriteString(`"node_loads":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NodeLoads), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NodeLoadMisses != nil {
 		if true {
-			buf.WriteString(`"node_load_misses":`)
+			buf.WriteString(`"node_load_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NodeLoadMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NodeStores != nil {
 		if true {
-			buf.WriteString(`"node_stores":`)
+			buf.WriteString(`"node_stores":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NodeStores), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NodeStoreMisses != nil {
 		if true {
-			buf.WriteString(`"node_store_misses":`)
+			buf.WriteString(`"node_store_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NodeStoreMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NodePrefetches != nil {
 		if true {
-			buf.WriteString(`"node_prefetches":`)
+			buf.WriteString(`"node_prefetches":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NodePrefetches), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NodePrefetchMisses != nil {
 		if true {
-			buf.WriteString(`"node_prefetch_misses":`)
+			buf.WriteString(`"node_prefetch_misses":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NodePrefetchMisses), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -27361,10 +27524,10 @@ handle_Duration:
 
 handle_Cycles:
 
-	/* handler: uj.Cycles type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Cycles type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27394,10 +27557,10 @@ handle_Cycles:
 
 handle_StalledCyclesFrontend:
 
-	/* handler: uj.StalledCyclesFrontend type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.StalledCyclesFrontend type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27427,10 +27590,10 @@ handle_StalledCyclesFrontend:
 
 handle_StalledCyclesBackend:
 
-	/* handler: uj.StalledCyclesBackend type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.StalledCyclesBackend type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27460,10 +27623,10 @@ handle_StalledCyclesBackend:
 
 handle_Instructions:
 
-	/* handler: uj.Instructions type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Instructions type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27493,10 +27656,10 @@ handle_Instructions:
 
 handle_CacheReferences:
 
-	/* handler: uj.CacheReferences type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.CacheReferences type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27526,10 +27689,10 @@ handle_CacheReferences:
 
 handle_CacheMisses:
 
-	/* handler: uj.CacheMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.CacheMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27559,10 +27722,10 @@ handle_CacheMisses:
 
 handle_Branches:
 
-	/* handler: uj.Branches type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Branches type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27592,10 +27755,10 @@ handle_Branches:
 
 handle_BranchMisses:
 
-	/* handler: uj.BranchMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.BranchMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27625,10 +27788,10 @@ handle_BranchMisses:
 
 handle_BusCycles:
 
-	/* handler: uj.BusCycles type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.BusCycles type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27658,10 +27821,10 @@ handle_BusCycles:
 
 handle_RefCycles:
 
-	/* handler: uj.RefCycles type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.RefCycles type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27757,10 +27920,10 @@ handle_TaskClock:
 
 handle_PageFaults:
 
-	/* handler: uj.PageFaults type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.PageFaults type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27790,10 +27953,10 @@ handle_PageFaults:
 
 handle_MinorFaults:
 
-	/* handler: uj.MinorFaults type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MinorFaults type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27823,10 +27986,10 @@ handle_MinorFaults:
 
 handle_MajorFaults:
 
-	/* handler: uj.MajorFaults type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MajorFaults type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27856,10 +28019,10 @@ handle_MajorFaults:
 
 handle_ContextSwitches:
 
-	/* handler: uj.ContextSwitches type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.ContextSwitches type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27889,10 +28052,10 @@ handle_ContextSwitches:
 
 handle_CPUMigrations:
 
-	/* handler: uj.CPUMigrations type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.CPUMigrations type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27922,10 +28085,10 @@ handle_CPUMigrations:
 
 handle_AlignmentFaults:
 
-	/* handler: uj.AlignmentFaults type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.AlignmentFaults type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27955,10 +28118,10 @@ handle_AlignmentFaults:
 
 handle_EmulationFaults:
 
-	/* handler: uj.EmulationFaults type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.EmulationFaults type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -27988,10 +28151,10 @@ handle_EmulationFaults:
 
 handle_L1DcacheLoads:
 
-	/* handler: uj.L1DcacheLoads type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.L1DcacheLoads type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28021,10 +28184,10 @@ handle_L1DcacheLoads:
 
 handle_L1DcacheLoadMisses:
 
-	/* handler: uj.L1DcacheLoadMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.L1DcacheLoadMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28054,10 +28217,10 @@ handle_L1DcacheLoadMisses:
 
 handle_L1DcacheStores:
 
-	/* handler: uj.L1DcacheStores type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.L1DcacheStores type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28087,10 +28250,10 @@ handle_L1DcacheStores:
 
 handle_L1DcacheStoreMisses:
 
-	/* handler: uj.L1DcacheStoreMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.L1DcacheStoreMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28120,10 +28283,10 @@ handle_L1DcacheStoreMisses:
 
 handle_L1DcachePrefetches:
 
-	/* handler: uj.L1DcachePrefetches type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.L1DcachePrefetches type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28153,10 +28316,10 @@ handle_L1DcachePrefetches:
 
 handle_L1DcachePrefetchMisses:
 
-	/* handler: uj.L1DcachePrefetchMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.L1DcachePrefetchMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28186,10 +28349,10 @@ handle_L1DcachePrefetchMisses:
 
 handle_L1IcacheLoads:
 
-	/* handler: uj.L1IcacheLoads type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.L1IcacheLoads type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28219,10 +28382,10 @@ handle_L1IcacheLoads:
 
 handle_L1IcacheLoadMisses:
 
-	/* handler: uj.L1IcacheLoadMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.L1IcacheLoadMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28252,10 +28415,10 @@ handle_L1IcacheLoadMisses:
 
 handle_L1IcachePrefetches:
 
-	/* handler: uj.L1IcachePrefetches type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.L1IcachePrefetches type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28285,10 +28448,10 @@ handle_L1IcachePrefetches:
 
 handle_L1IcachePrefetchMisses:
 
-	/* handler: uj.L1IcachePrefetchMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.L1IcachePrefetchMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28318,10 +28481,10 @@ handle_L1IcachePrefetchMisses:
 
 handle_LLCLoads:
 
-	/* handler: uj.LLCLoads type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.LLCLoads type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28351,10 +28514,10 @@ handle_LLCLoads:
 
 handle_LLCLoadMisses:
 
-	/* handler: uj.LLCLoadMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.LLCLoadMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28384,10 +28547,10 @@ handle_LLCLoadMisses:
 
 handle_LLCStores:
 
-	/* handler: uj.LLCStores type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.LLCStores type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28417,10 +28580,10 @@ handle_LLCStores:
 
 handle_LLCStoreMisses:
 
-	/* handler: uj.LLCStoreMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.LLCStoreMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28450,10 +28613,10 @@ handle_LLCStoreMisses:
 
 handle_LLCPrefetches:
 
-	/* handler: uj.LLCPrefetches type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.LLCPrefetches type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28483,10 +28646,10 @@ handle_LLCPrefetches:
 
 handle_LLCPrefetchMisses:
 
-	/* handler: uj.LLCPrefetchMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.LLCPrefetchMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28516,10 +28679,10 @@ handle_LLCPrefetchMisses:
 
 handle_DTLBLoads:
 
-	/* handler: uj.DTLBLoads type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.DTLBLoads type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28549,10 +28712,10 @@ handle_DTLBLoads:
 
 handle_DTLBLoadMisses:
 
-	/* handler: uj.DTLBLoadMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.DTLBLoadMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28582,10 +28745,10 @@ handle_DTLBLoadMisses:
 
 handle_DTLBStores:
 
-	/* handler: uj.DTLBStores type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.DTLBStores type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28615,10 +28778,10 @@ handle_DTLBStores:
 
 handle_DTLBStoreMisses:
 
-	/* handler: uj.DTLBStoreMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.DTLBStoreMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28648,10 +28811,10 @@ handle_DTLBStoreMisses:
 
 handle_DTLBPrefetches:
 
-	/* handler: uj.DTLBPrefetches type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.DTLBPrefetches type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28681,10 +28844,10 @@ handle_DTLBPrefetches:
 
 handle_DTLBPrefetchMisses:
 
-	/* handler: uj.DTLBPrefetchMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.DTLBPrefetchMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28714,10 +28877,10 @@ handle_DTLBPrefetchMisses:
 
 handle_ITLBLoads:
 
-	/* handler: uj.ITLBLoads type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.ITLBLoads type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28747,10 +28910,10 @@ handle_ITLBLoads:
 
 handle_ITLBLoadMisses:
 
-	/* handler: uj.ITLBLoadMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.ITLBLoadMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28780,10 +28943,10 @@ handle_ITLBLoadMisses:
 
 handle_BranchLoads:
 
-	/* handler: uj.BranchLoads type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.BranchLoads type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28813,10 +28976,10 @@ handle_BranchLoads:
 
 handle_BranchLoadMisses:
 
-	/* handler: uj.BranchLoadMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.BranchLoadMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28846,10 +29009,10 @@ handle_BranchLoadMisses:
 
 handle_NodeLoads:
 
-	/* handler: uj.NodeLoads type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NodeLoads type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28879,10 +29042,10 @@ handle_NodeLoads:
 
 handle_NodeLoadMisses:
 
-	/* handler: uj.NodeLoadMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NodeLoadMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28912,10 +29075,10 @@ handle_NodeLoadMisses:
 
 handle_NodeStores:
 
-	/* handler: uj.NodeStores type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NodeStores type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28945,10 +29108,10 @@ handle_NodeStores:
 
 handle_NodeStoreMisses:
 
-	/* handler: uj.NodeStoreMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NodeStoreMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -28978,10 +29141,10 @@ handle_NodeStoreMisses:
 
 handle_NodePrefetches:
 
-	/* handler: uj.NodePrefetches type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NodePrefetches type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -29011,10 +29174,10 @@ handle_NodePrefetches:
 
 handle_NodePrefetchMisses:
 
-	/* handler: uj.NodePrefetchMisses type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NodePrefetchMisses type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -29056,6 +29219,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -29495,6 +29659,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -29745,6 +29910,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -29995,6 +30161,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -30033,15 +30200,17 @@ func (mj *RLimitInfo_RLimit) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	buf.WriteByte(',')
 	if mj.Hard != nil {
 		if true {
-			buf.WriteString(`"hard":`)
+			buf.WriteString(`"hard":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Hard), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.Soft != nil {
 		if true {
-			buf.WriteString(`"soft":`)
+			buf.WriteString(`"soft":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Soft), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -30238,10 +30407,10 @@ handle_Type:
 
 handle_Hard:
 
-	/* handler: uj.Hard type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Hard type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -30271,10 +30440,10 @@ handle_Hard:
 
 handle_Soft:
 
-	/* handler: uj.Soft type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Soft type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -30316,6 +30485,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -30353,8 +30523,9 @@ func (mj *RateLimit) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	buf.WriteByte(',')
 	if mj.Capacity != nil {
 		if true {
-			buf.WriteString(`"capacity":`)
+			buf.WriteString(`"capacity":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Capacity), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -30584,10 +30755,10 @@ handle_Principal:
 
 handle_Capacity:
 
-	/* handler: uj.Capacity type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Capacity type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -30629,6 +30800,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -30684,8 +30856,9 @@ func (mj *RateLimits) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	}
 	if mj.AggregateDefaultCapacity != nil {
 		if true {
-			buf.WriteString(`"aggregate_default_capacity":`)
+			buf.WriteString(`"aggregate_default_capacity":"`)
 			fflib.FormatBits2(buf, uint64(*mj.AggregateDefaultCapacity), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -30955,10 +31128,10 @@ handle_AggregateDefaultQPS:
 
 handle_AggregateDefaultCapacity:
 
-	/* handler: uj.AggregateDefaultCapacity type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.AggregateDefaultCapacity type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -31000,6 +31173,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -31314,6 +31488,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -32120,6 +32295,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -32205,113 +32381,129 @@ func (mj *ResourceStatistics) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	}
 	if mj.MemTotalBytes != nil {
 		if true {
-			buf.WriteString(`"mem_total_bytes":`)
+			buf.WriteString(`"mem_total_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemTotalBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemTotalMemswBytes != nil {
 		if true {
-			buf.WriteString(`"mem_total_memsw_bytes":`)
+			buf.WriteString(`"mem_total_memsw_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemTotalMemswBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemLimitBytes != nil {
 		if true {
-			buf.WriteString(`"mem_limit_bytes":`)
+			buf.WriteString(`"mem_limit_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemLimitBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemSoftLimitBytes != nil {
 		if true {
-			buf.WriteString(`"mem_soft_limit_bytes":`)
+			buf.WriteString(`"mem_soft_limit_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemSoftLimitBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemFileBytes != nil {
 		if true {
-			buf.WriteString(`"mem_file_bytes":`)
+			buf.WriteString(`"mem_file_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemFileBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemAnonBytes != nil {
 		if true {
-			buf.WriteString(`"mem_anon_bytes":`)
+			buf.WriteString(`"mem_anon_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemAnonBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemCacheBytes != nil {
 		if true {
-			buf.WriteString(`"mem_cache_bytes":`)
+			buf.WriteString(`"mem_cache_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemCacheBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemRSSBytes != nil {
 		if true {
-			buf.WriteString(`"mem_rss_bytes":`)
+			buf.WriteString(`"mem_rss_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemRSSBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemMappedFileBytes != nil {
 		if true {
-			buf.WriteString(`"mem_mapped_file_bytes":`)
+			buf.WriteString(`"mem_mapped_file_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemMappedFileBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemSwapBytes != nil {
 		if true {
-			buf.WriteString(`"mem_swap_bytes":`)
+			buf.WriteString(`"mem_swap_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemSwapBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemUnevictableBytes != nil {
 		if true {
-			buf.WriteString(`"mem_unevictable_bytes":`)
+			buf.WriteString(`"mem_unevictable_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemUnevictableBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemLowPressureCounter != nil {
 		if true {
-			buf.WriteString(`"mem_low_pressure_counter":`)
+			buf.WriteString(`"mem_low_pressure_counter":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemLowPressureCounter), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemMediumPressureCounter != nil {
 		if true {
-			buf.WriteString(`"mem_medium_pressure_counter":`)
+			buf.WriteString(`"mem_medium_pressure_counter":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemMediumPressureCounter), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MemCriticalPressureCounter != nil {
 		if true {
-			buf.WriteString(`"mem_critical_pressure_counter":`)
+			buf.WriteString(`"mem_critical_pressure_counter":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MemCriticalPressureCounter), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.DiskLimitBytes != nil {
 		if true {
-			buf.WriteString(`"disk_limit_bytes":`)
+			buf.WriteString(`"disk_limit_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.DiskLimitBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.DiskUsedBytes != nil {
 		if true {
-			buf.WriteString(`"disk_used_bytes":`)
+			buf.WriteString(`"disk_used_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.DiskUsedBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -32332,57 +32524,65 @@ func (mj *ResourceStatistics) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	}
 	if mj.NetRxPackets != nil {
 		if true {
-			buf.WriteString(`"net_rx_packets":`)
+			buf.WriteString(`"net_rx_packets":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NetRxPackets), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NetRxBytes != nil {
 		if true {
-			buf.WriteString(`"net_rx_bytes":`)
+			buf.WriteString(`"net_rx_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NetRxBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NetRxErrors != nil {
 		if true {
-			buf.WriteString(`"net_rx_errors":`)
+			buf.WriteString(`"net_rx_errors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NetRxErrors), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NetRxDropped != nil {
 		if true {
-			buf.WriteString(`"net_rx_dropped":`)
+			buf.WriteString(`"net_rx_dropped":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NetRxDropped), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NetTxPackets != nil {
 		if true {
-			buf.WriteString(`"net_tx_packets":`)
+			buf.WriteString(`"net_tx_packets":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NetTxPackets), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NetTxBytes != nil {
 		if true {
-			buf.WriteString(`"net_tx_bytes":`)
+			buf.WriteString(`"net_tx_bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NetTxBytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NetTxErrors != nil {
 		if true {
-			buf.WriteString(`"net_tx_errors":`)
+			buf.WriteString(`"net_tx_errors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NetTxErrors), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NetTxDropped != nil {
 		if true {
-			buf.WriteString(`"net_tx_dropped":`)
+			buf.WriteString(`"net_tx_dropped":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NetTxDropped), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -33637,10 +33837,10 @@ handle_CPUsThrottledTimeSecs:
 
 handle_MemTotalBytes:
 
-	/* handler: uj.MemTotalBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemTotalBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -33670,10 +33870,10 @@ handle_MemTotalBytes:
 
 handle_MemTotalMemswBytes:
 
-	/* handler: uj.MemTotalMemswBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemTotalMemswBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -33703,10 +33903,10 @@ handle_MemTotalMemswBytes:
 
 handle_MemLimitBytes:
 
-	/* handler: uj.MemLimitBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemLimitBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -33736,10 +33936,10 @@ handle_MemLimitBytes:
 
 handle_MemSoftLimitBytes:
 
-	/* handler: uj.MemSoftLimitBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemSoftLimitBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -33769,10 +33969,10 @@ handle_MemSoftLimitBytes:
 
 handle_MemFileBytes:
 
-	/* handler: uj.MemFileBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemFileBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -33802,10 +34002,10 @@ handle_MemFileBytes:
 
 handle_MemAnonBytes:
 
-	/* handler: uj.MemAnonBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemAnonBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -33835,10 +34035,10 @@ handle_MemAnonBytes:
 
 handle_MemCacheBytes:
 
-	/* handler: uj.MemCacheBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemCacheBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -33868,10 +34068,10 @@ handle_MemCacheBytes:
 
 handle_MemRSSBytes:
 
-	/* handler: uj.MemRSSBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemRSSBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -33901,10 +34101,10 @@ handle_MemRSSBytes:
 
 handle_MemMappedFileBytes:
 
-	/* handler: uj.MemMappedFileBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemMappedFileBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -33934,10 +34134,10 @@ handle_MemMappedFileBytes:
 
 handle_MemSwapBytes:
 
-	/* handler: uj.MemSwapBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemSwapBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -33967,10 +34167,10 @@ handle_MemSwapBytes:
 
 handle_MemUnevictableBytes:
 
-	/* handler: uj.MemUnevictableBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemUnevictableBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34000,10 +34200,10 @@ handle_MemUnevictableBytes:
 
 handle_MemLowPressureCounter:
 
-	/* handler: uj.MemLowPressureCounter type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemLowPressureCounter type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34033,10 +34233,10 @@ handle_MemLowPressureCounter:
 
 handle_MemMediumPressureCounter:
 
-	/* handler: uj.MemMediumPressureCounter type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemMediumPressureCounter type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34066,10 +34266,10 @@ handle_MemMediumPressureCounter:
 
 handle_MemCriticalPressureCounter:
 
-	/* handler: uj.MemCriticalPressureCounter type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.MemCriticalPressureCounter type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34099,10 +34299,10 @@ handle_MemCriticalPressureCounter:
 
 handle_DiskLimitBytes:
 
-	/* handler: uj.DiskLimitBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.DiskLimitBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34132,10 +34332,10 @@ handle_DiskLimitBytes:
 
 handle_DiskUsedBytes:
 
-	/* handler: uj.DiskUsedBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.DiskUsedBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34192,10 +34392,10 @@ handle_Perf:
 
 handle_NetRxPackets:
 
-	/* handler: uj.NetRxPackets type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NetRxPackets type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34225,10 +34425,10 @@ handle_NetRxPackets:
 
 handle_NetRxBytes:
 
-	/* handler: uj.NetRxBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NetRxBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34258,10 +34458,10 @@ handle_NetRxBytes:
 
 handle_NetRxErrors:
 
-	/* handler: uj.NetRxErrors type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NetRxErrors type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34291,10 +34491,10 @@ handle_NetRxErrors:
 
 handle_NetRxDropped:
 
-	/* handler: uj.NetRxDropped type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NetRxDropped type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34324,10 +34524,10 @@ handle_NetRxDropped:
 
 handle_NetTxPackets:
 
-	/* handler: uj.NetTxPackets type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NetTxPackets type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34357,10 +34557,10 @@ handle_NetTxPackets:
 
 handle_NetTxBytes:
 
-	/* handler: uj.NetTxBytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NetTxBytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34390,10 +34590,10 @@ handle_NetTxBytes:
 
 handle_NetTxErrors:
 
-	/* handler: uj.NetTxErrors type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NetTxErrors type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34423,10 +34623,10 @@ handle_NetTxErrors:
 
 handle_NetTxDropped:
 
-	/* handler: uj.NetTxDropped type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.NetTxDropped type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -34762,6 +34962,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -35123,6 +35324,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -35652,6 +35854,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -36068,6 +36271,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -36267,6 +36471,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -36597,6 +36802,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -36845,6 +37051,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -37181,6 +37388,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -37369,6 +37577,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -37557,6 +37766,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -37819,6 +38029,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -37958,6 +38169,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -38097,6 +38309,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -38560,6 +38773,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -38950,6 +39164,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -39154,6 +39369,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -39399,6 +39615,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -40474,6 +40691,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -40724,6 +40942,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -40912,6 +41131,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -41878,6 +42098,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -42967,6 +43188,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -42994,106 +43216,121 @@ func (mj *TcpStatistics) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	buf.WriteString(`{ `)
 	if mj.RtoAlgorithm != nil {
 		if true {
-			buf.WriteString(`"RtoAlgorithm":`)
+			buf.WriteString(`"RtoAlgorithm":"`)
 			fflib.FormatBits2(buf, uint64(*mj.RtoAlgorithm), 10, *mj.RtoAlgorithm < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.RtoMin != nil {
 		if true {
-			buf.WriteString(`"RtoMin":`)
+			buf.WriteString(`"RtoMin":"`)
 			fflib.FormatBits2(buf, uint64(*mj.RtoMin), 10, *mj.RtoMin < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.RtoMax != nil {
 		if true {
-			buf.WriteString(`"RtoMax":`)
+			buf.WriteString(`"RtoMax":"`)
 			fflib.FormatBits2(buf, uint64(*mj.RtoMax), 10, *mj.RtoMax < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.MaxConn != nil {
 		if true {
-			buf.WriteString(`"MaxConn":`)
+			buf.WriteString(`"MaxConn":"`)
 			fflib.FormatBits2(buf, uint64(*mj.MaxConn), 10, *mj.MaxConn < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.ActiveOpens != nil {
 		if true {
-			buf.WriteString(`"ActiveOpens":`)
+			buf.WriteString(`"ActiveOpens":"`)
 			fflib.FormatBits2(buf, uint64(*mj.ActiveOpens), 10, *mj.ActiveOpens < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.PassiveOpens != nil {
 		if true {
-			buf.WriteString(`"PassiveOpens":`)
+			buf.WriteString(`"PassiveOpens":"`)
 			fflib.FormatBits2(buf, uint64(*mj.PassiveOpens), 10, *mj.PassiveOpens < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.AttemptFails != nil {
 		if true {
-			buf.WriteString(`"AttemptFails":`)
+			buf.WriteString(`"AttemptFails":"`)
 			fflib.FormatBits2(buf, uint64(*mj.AttemptFails), 10, *mj.AttemptFails < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.EstabResets != nil {
 		if true {
-			buf.WriteString(`"EstabResets":`)
+			buf.WriteString(`"EstabResets":"`)
 			fflib.FormatBits2(buf, uint64(*mj.EstabResets), 10, *mj.EstabResets < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.CurrEstab != nil {
 		if true {
-			buf.WriteString(`"CurrEstab":`)
+			buf.WriteString(`"CurrEstab":"`)
 			fflib.FormatBits2(buf, uint64(*mj.CurrEstab), 10, *mj.CurrEstab < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InSegs != nil {
 		if true {
-			buf.WriteString(`"InSegs":`)
+			buf.WriteString(`"InSegs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InSegs), 10, *mj.InSegs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutSegs != nil {
 		if true {
-			buf.WriteString(`"OutSegs":`)
+			buf.WriteString(`"OutSegs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutSegs), 10, *mj.OutSegs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.RetransSegs != nil {
 		if true {
-			buf.WriteString(`"RetransSegs":`)
+			buf.WriteString(`"RetransSegs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.RetransSegs), 10, *mj.RetransSegs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InErrs != nil {
 		if true {
-			buf.WriteString(`"InErrs":`)
+			buf.WriteString(`"InErrs":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InErrs), 10, *mj.InErrs < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutRsts != nil {
 		if true {
-			buf.WriteString(`"OutRsts":`)
+			buf.WriteString(`"OutRsts":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutRsts), 10, *mj.OutRsts < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InCsumErrors != nil {
 		if true {
-			buf.WriteString(`"InCsumErrors":`)
+			buf.WriteString(`"InCsumErrors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InCsumErrors), 10, *mj.InCsumErrors < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -43495,10 +43732,10 @@ mainparse:
 
 handle_RtoAlgorithm:
 
-	/* handler: uj.RtoAlgorithm type=int64 kind=int64 quoted=false*/
+	/* handler: uj.RtoAlgorithm type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43528,10 +43765,10 @@ handle_RtoAlgorithm:
 
 handle_RtoMin:
 
-	/* handler: uj.RtoMin type=int64 kind=int64 quoted=false*/
+	/* handler: uj.RtoMin type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43561,10 +43798,10 @@ handle_RtoMin:
 
 handle_RtoMax:
 
-	/* handler: uj.RtoMax type=int64 kind=int64 quoted=false*/
+	/* handler: uj.RtoMax type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43594,10 +43831,10 @@ handle_RtoMax:
 
 handle_MaxConn:
 
-	/* handler: uj.MaxConn type=int64 kind=int64 quoted=false*/
+	/* handler: uj.MaxConn type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43627,10 +43864,10 @@ handle_MaxConn:
 
 handle_ActiveOpens:
 
-	/* handler: uj.ActiveOpens type=int64 kind=int64 quoted=false*/
+	/* handler: uj.ActiveOpens type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43660,10 +43897,10 @@ handle_ActiveOpens:
 
 handle_PassiveOpens:
 
-	/* handler: uj.PassiveOpens type=int64 kind=int64 quoted=false*/
+	/* handler: uj.PassiveOpens type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43693,10 +43930,10 @@ handle_PassiveOpens:
 
 handle_AttemptFails:
 
-	/* handler: uj.AttemptFails type=int64 kind=int64 quoted=false*/
+	/* handler: uj.AttemptFails type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43726,10 +43963,10 @@ handle_AttemptFails:
 
 handle_EstabResets:
 
-	/* handler: uj.EstabResets type=int64 kind=int64 quoted=false*/
+	/* handler: uj.EstabResets type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43759,10 +43996,10 @@ handle_EstabResets:
 
 handle_CurrEstab:
 
-	/* handler: uj.CurrEstab type=int64 kind=int64 quoted=false*/
+	/* handler: uj.CurrEstab type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43792,10 +44029,10 @@ handle_CurrEstab:
 
 handle_InSegs:
 
-	/* handler: uj.InSegs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InSegs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43825,10 +44062,10 @@ handle_InSegs:
 
 handle_OutSegs:
 
-	/* handler: uj.OutSegs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutSegs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43858,10 +44095,10 @@ handle_OutSegs:
 
 handle_RetransSegs:
 
-	/* handler: uj.RetransSegs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.RetransSegs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43891,10 +44128,10 @@ handle_RetransSegs:
 
 handle_InErrs:
 
-	/* handler: uj.InErrs type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InErrs type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43924,10 +44161,10 @@ handle_InErrs:
 
 handle_OutRsts:
 
-	/* handler: uj.OutRsts type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutRsts type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -43957,10 +44194,10 @@ handle_OutRsts:
 
 handle_InCsumErrors:
 
-	/* handler: uj.InCsumErrors type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InCsumErrors type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -44002,6 +44239,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -44026,9 +44264,9 @@ func (mj *TimeInfo) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	var obj []byte
 	_ = obj
 	_ = err
-	buf.WriteString(`{"nanoseconds":`)
+	buf.WriteString(`{"nanoseconds":"`)
 	fflib.FormatBits2(buf, uint64(mj.Nanoseconds), 10, mj.Nanoseconds < 0)
-	buf.WriteByte('}')
+	buf.WriteString(`"}`)
 	return nil
 }
 
@@ -44152,10 +44390,10 @@ mainparse:
 
 handle_Nanoseconds:
 
-	/* handler: uj.Nanoseconds type=int64 kind=int64 quoted=false*/
+	/* handler: uj.Nanoseconds type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -44194,6 +44432,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -44223,64 +44462,73 @@ func (mj *TrafficControlStatistics) MarshalJSONBuf(buf fflib.EncodingBuffer) err
 	buf.WriteByte(',')
 	if mj.Backlog != nil {
 		if true {
-			buf.WriteString(`"backlog":`)
+			buf.WriteString(`"backlog":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Backlog), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.Bytes != nil {
 		if true {
-			buf.WriteString(`"bytes":`)
+			buf.WriteString(`"bytes":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Bytes), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.Drops != nil {
 		if true {
-			buf.WriteString(`"drops":`)
+			buf.WriteString(`"drops":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Drops), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.Overlimits != nil {
 		if true {
-			buf.WriteString(`"overlimits":`)
+			buf.WriteString(`"overlimits":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Overlimits), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.Packets != nil {
 		if true {
-			buf.WriteString(`"packets":`)
+			buf.WriteString(`"packets":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Packets), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.Qlen != nil {
 		if true {
-			buf.WriteString(`"qlen":`)
+			buf.WriteString(`"qlen":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Qlen), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.RateBPS != nil {
 		if true {
-			buf.WriteString(`"ratebps":`)
+			buf.WriteString(`"ratebps":"`)
 			fflib.FormatBits2(buf, uint64(*mj.RateBPS), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.RatePPS != nil {
 		if true {
-			buf.WriteString(`"ratepps":`)
+			buf.WriteString(`"ratepps":"`)
 			fflib.FormatBits2(buf, uint64(*mj.RatePPS), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.Requeues != nil {
 		if true {
-			buf.WriteString(`"requeues":`)
+			buf.WriteString(`"requeues":"`)
 			fflib.FormatBits2(buf, uint64(*mj.Requeues), 10, false)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -44615,10 +44863,10 @@ handle_ID:
 
 handle_Backlog:
 
-	/* handler: uj.Backlog type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Backlog type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -44648,10 +44896,10 @@ handle_Backlog:
 
 handle_Bytes:
 
-	/* handler: uj.Bytes type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Bytes type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -44681,10 +44929,10 @@ handle_Bytes:
 
 handle_Drops:
 
-	/* handler: uj.Drops type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Drops type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -44714,10 +44962,10 @@ handle_Drops:
 
 handle_Overlimits:
 
-	/* handler: uj.Overlimits type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Overlimits type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -44747,10 +44995,10 @@ handle_Overlimits:
 
 handle_Packets:
 
-	/* handler: uj.Packets type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Packets type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -44780,10 +45028,10 @@ handle_Packets:
 
 handle_Qlen:
 
-	/* handler: uj.Qlen type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Qlen type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -44813,10 +45061,10 @@ handle_Qlen:
 
 handle_RateBPS:
 
-	/* handler: uj.RateBPS type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.RateBPS type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -44846,10 +45094,10 @@ handle_RateBPS:
 
 handle_RatePPS:
 
-	/* handler: uj.RatePPS type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.RatePPS type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -44879,10 +45127,10 @@ handle_RatePPS:
 
 handle_Requeues:
 
-	/* handler: uj.Requeues type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Requeues type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -44924,6 +45172,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -45394,6 +45643,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -45421,57 +45671,65 @@ func (mj *UdpStatistics) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	buf.WriteString(`{ `)
 	if mj.InDatagrams != nil {
 		if true {
-			buf.WriteString(`"InDatagrams":`)
+			buf.WriteString(`"InDatagrams":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InDatagrams), 10, *mj.InDatagrams < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.NoPorts != nil {
 		if true {
-			buf.WriteString(`"NoPorts":`)
+			buf.WriteString(`"NoPorts":"`)
 			fflib.FormatBits2(buf, uint64(*mj.NoPorts), 10, *mj.NoPorts < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InErrors != nil {
 		if true {
-			buf.WriteString(`"InErrors":`)
+			buf.WriteString(`"InErrors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InErrors), 10, *mj.InErrors < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.OutDatagrams != nil {
 		if true {
-			buf.WriteString(`"OutDatagrams":`)
+			buf.WriteString(`"OutDatagrams":"`)
 			fflib.FormatBits2(buf, uint64(*mj.OutDatagrams), 10, *mj.OutDatagrams < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.RcvbufErrors != nil {
 		if true {
-			buf.WriteString(`"RcvbufErrors":`)
+			buf.WriteString(`"RcvbufErrors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.RcvbufErrors), 10, *mj.RcvbufErrors < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.SndbufErrors != nil {
 		if true {
-			buf.WriteString(`"SndbufErrors":`)
+			buf.WriteString(`"SndbufErrors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.SndbufErrors), 10, *mj.SndbufErrors < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.InCsumErrors != nil {
 		if true {
-			buf.WriteString(`"InCsumErrors":`)
+			buf.WriteString(`"InCsumErrors":"`)
 			fflib.FormatBits2(buf, uint64(*mj.InCsumErrors), 10, *mj.InCsumErrors < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
 	if mj.IgnoredMulti != nil {
 		if true {
-			buf.WriteString(`"IgnoredMulti":`)
+			buf.WriteString(`"IgnoredMulti":"`)
 			fflib.FormatBits2(buf, uint64(*mj.IgnoredMulti), 10, *mj.IgnoredMulti < 0)
+			buf.WriteByte('"')
 			buf.WriteByte(',')
 		}
 	}
@@ -45738,10 +45996,10 @@ mainparse:
 
 handle_InDatagrams:
 
-	/* handler: uj.InDatagrams type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InDatagrams type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -45771,10 +46029,10 @@ handle_InDatagrams:
 
 handle_NoPorts:
 
-	/* handler: uj.NoPorts type=int64 kind=int64 quoted=false*/
+	/* handler: uj.NoPorts type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -45804,10 +46062,10 @@ handle_NoPorts:
 
 handle_InErrors:
 
-	/* handler: uj.InErrors type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InErrors type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -45837,10 +46095,10 @@ handle_InErrors:
 
 handle_OutDatagrams:
 
-	/* handler: uj.OutDatagrams type=int64 kind=int64 quoted=false*/
+	/* handler: uj.OutDatagrams type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -45870,10 +46128,10 @@ handle_OutDatagrams:
 
 handle_RcvbufErrors:
 
-	/* handler: uj.RcvbufErrors type=int64 kind=int64 quoted=false*/
+	/* handler: uj.RcvbufErrors type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -45903,10 +46161,10 @@ handle_RcvbufErrors:
 
 handle_SndbufErrors:
 
-	/* handler: uj.SndbufErrors type=int64 kind=int64 quoted=false*/
+	/* handler: uj.SndbufErrors type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -45936,10 +46194,10 @@ handle_SndbufErrors:
 
 handle_InCsumErrors:
 
-	/* handler: uj.InCsumErrors type=int64 kind=int64 quoted=false*/
+	/* handler: uj.InCsumErrors type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -45969,10 +46227,10 @@ handle_InCsumErrors:
 
 handle_IgnoredMulti:
 
-	/* handler: uj.IgnoredMulti type=int64 kind=int64 quoted=false*/
+	/* handler: uj.IgnoredMulti type=int64 kind=int64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for int64", tok))
 		}
 	}
@@ -46014,6 +46272,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -46270,6 +46529,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -46715,6 +46975,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -46739,11 +47000,11 @@ func (mj *Value_Range) MarshalJSONBuf(buf fflib.EncodingBuffer) error {
 	var obj []byte
 	_ = obj
 	_ = err
-	buf.WriteString(`{"begin":`)
+	buf.WriteString(`{"begin":"`)
 	fflib.FormatBits2(buf, uint64(mj.Begin), 10, false)
-	buf.WriteString(`,"end":`)
+	buf.WriteString(`","end":"`)
 	fflib.FormatBits2(buf, uint64(mj.End), 10, false)
-	buf.WriteByte('}')
+	buf.WriteString(`"}`)
 	return nil
 }
 
@@ -46888,10 +47149,10 @@ mainparse:
 
 handle_Begin:
 
-	/* handler: uj.Begin type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.Begin type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -46918,10 +47179,10 @@ handle_Begin:
 
 handle_End:
 
-	/* handler: uj.End type=uint64 kind=uint64 quoted=false*/
+	/* handler: uj.End type=uint64 kind=uint64 quoted=true*/
 
 	{
-		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null {
+		if tok != fflib.FFTok_integer && tok != fflib.FFTok_null && tok != fflib.FFTok_string {
 			return fs.WrapErr(fmt.Errorf("cannot unmarshal %s into Go value for uint64", tok))
 		}
 	}
@@ -46960,6 +47221,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -47210,6 +47472,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -47402,6 +47665,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -47654,6 +47918,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -47842,6 +48107,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -48371,6 +48637,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -48815,6 +49082,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -49140,6 +49408,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -49449,6 +49718,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -49695,6 +49965,7 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
 
@@ -49947,5 +50218,6 @@ tokerror:
 	}
 	panic("ffjson-generated: unreachable, please report bug.")
 done:
+
 	return nil
 }
