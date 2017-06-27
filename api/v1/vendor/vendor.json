@@ -3,14 +3,14 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "GmHBe2pZIcEhn7535kbaMqIY+1g=",
+			"checksumSHA1": "EwyRZYs7s+98R57o68g8kU3e6eQ=",
 			"origin": "github.com/jdef/protobuf",
 			"path": "github.com/gogo/protobuf",
-			"revision": "7a6faa1856ed150dcffccb33326d2b86500df377",
-			"revisionTime": "2017-06-27T14:38:25Z",
+			"revision": "544e401a1df424cc38b668bd73b0d2d64bb300d5",
+			"revisionTime": "2017-06-27T19:33:49Z",
 			"tree": true,
-			"version": "string_for_int64",
-			"versionExact": "string_for_int64"
+			"version": "jdef_fixes",
+			"versionExact": "jdef_fixes"
 		},
 		{
 			"checksumSHA1": "tbct1d7/kPoa7bOEEX9HvvddUoc=",
